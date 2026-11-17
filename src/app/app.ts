@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TodoDashboard } from './shared/components/todo-dashboard/todo-dashboard';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [TodoDashboard],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',

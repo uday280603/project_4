@@ -1,0 +1,22 @@
+
+
+
+@if (todoData()?.length > 0) {
+  <ul class="list-group">
+    @for (todo of todoData(); track $index) {
+      <li class="list-group-item d-flex justify-content-between">
+        <p>{{ todo.todoName }}</p>
+
+        <div class="d-flex justify-content-between">
+          <button matButton="outlined" class="mr-1" (click)="onEditTodo(todo)">edit</button>
+          <button matButton="outlined" class="mr-1" (click)="onRemoveTodo(todo.todoId)">
+            remove
+          </button>
+        </div>
+      </li>
+    }
+  </ul>
+}
+@else {
+    <p class="bg-danger text-dark text-center">NO TODO FOUND..!</p>
+}
